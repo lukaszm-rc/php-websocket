@@ -1,0 +1,18 @@
+{
+    "name": "websocket/websocket",
+    "description": "WebSocket",
+    "authors": [
+        {
+            "name": "Lukasz Mazurek",
+            "email": "lukasz.mazurek@boo.pl"
+        }
+    ],
+    "require": {
+        "react/socket": "0.4.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "WebSocket\\": "src/WebSocket/"
+        }
+    }
+}
