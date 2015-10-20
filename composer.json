@@ -1,20 +1,29 @@
 {
-    "name": "websocket/websocket",
-    "description": "WebSocket implementation.",
-    "license": "MIT",
-    "authors": [
-	{
-	    "name": "Lukasz Mazurek",
-	    "email": "lukasz.mazurek@boo.pl"
+	"name": "websocket/websocket",
+	"description": "WebSocket implementation.",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Lukasz Mazurek",
+			"email": "lukasz.mazurek@boo.pl"
+		}
+	],
+	"require": {
+		"php": ">=5.4.0",
+		"react/socket": "0.4.*"
+	},
+	"require-dev": {
+		"cboden/ratchet": "dev-master"
+	},
+	"autoload": {
+		"psr-4": {
+			"WebSocket\\": "src/WebSocket/"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"WebSocket\\": "src/WebSocket/"
+		}
+
 	}
-    ],
-    "require": {
-	"php": ">=5.4.0",
-	"react/socket": "0.4.*"
-    },
-    "autoload": {
-	"psr-4": {
-	    "WebSocket\\": "src/WebSocket/"
-	}
-    }
 }
