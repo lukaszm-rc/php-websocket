@@ -7,12 +7,11 @@ namespace WebSocket\Client;
  *
  * @author Lukasz Mazurek <lukasz.mazurek@redcart.pl>
  */
-interface WebSocketClientInterface  {
+interface WebSocketClientInterface {
 
-	public function onConnect();
+    public function onConnect();
 
-	public function onMessage($data);
-	
-	public function setClient(WebSocketConnection $client);
-	
+    public function onMessage($data);
+
+    public function setClient(WebSocketConnection $client);
 }

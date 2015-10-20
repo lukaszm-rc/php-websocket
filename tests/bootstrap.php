@@ -1,28 +1,11 @@
 <?php
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * Description of functions
+ *
+ * @author Lukasz Mazurek <lukasz.mazurek@redcart.pl>
  */
 
-/**
- * @author kisiel
- */
-// TODO: check include path
-//ini_set('include_path', ini_get('include_path'));
-//$vendor = realpath(__DIR__ . '/../vendor');
-//
-//if (file_exists($vendor . "/autoload.php")) {
-//    require $vendor . "/autoload.php";
-//} else {
-//    $vendor = realpath(__DIR__ . '/../../../');
-//    if (file_exists($vendor . "/autoload.php")) {
-//        require $vendor . "/autoload.php";
-//    } else {
-//        throw new Exception("Unable to load dependencies");
-//    }
-//}
 define('SHELL_CORE_PATH', realpath(__DIR__ . DIRECTORY_SEPARATOR . '..'));
 include "../vendor/autoload.php";
 spl_autoload_register(function ($className) {
