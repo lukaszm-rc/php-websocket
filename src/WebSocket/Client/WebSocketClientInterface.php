@@ -13,5 +13,5 @@ interface WebSocketClientInterface {
 
     public function onMessage($data);
 
-    public function setClient(WebSocketConnection $client);
+    public function setSocket(WebSocketConnection $socket);
 }
