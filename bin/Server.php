@@ -14,5 +14,6 @@ $server = WebSocket\Server\WebSocketServer::Factory($messageHandler, "127.0.0.1"
  */
 $server->loop->addPeriodicTimer(5, function () {
 	echo "+";
+	return true;
 });
 $server->run();

@@ -49,7 +49,7 @@ class WebSocketConnection {
 	 * @param string $path
 	 * @param null|string $origin
 	 */
-	public function __construct(WebSocketClientInterface $client, LoopInterface &$loop, $host = '127.0.0.1', $port = 8080, $path = '/', $origin = null) {
+	public function __construct(WebSocketClientInterface &$client, LoopInterface &$loop, $host = '127.0.0.1', $port = 8080, $path = '/', $origin = null) {
 		$this->setLoop($loop);
 		$this->setHost($host);
 		$this->setPort($port);

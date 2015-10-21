@@ -112,6 +112,7 @@ class WebSocketServer {
 	 */
 	public function handleData($data, $conn) {
 		try {
+			print_r($data);
 			$this->app->onMessage($conn->decor, $data);
 		}
 		catch (\Exception $e) {
