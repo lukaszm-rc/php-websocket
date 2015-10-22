@@ -7,7 +7,6 @@
  */
 
 namespace WebSocket\Server;
-
 /**
  * Description of WebSocketMessageInterface
  *

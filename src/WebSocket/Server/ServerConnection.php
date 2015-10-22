@@ -7,13 +7,8 @@
  */
 
 namespace WebSocket\Server;
-
-use React\Socket\ConnectionInterface;
-
-/**
- * {@inheritdoc}
- */
-class ServerConnection {
+use \React\Socket\Connection;
+class ServerConnection   {
 
 	/**
 	 * @var \React\Socket\ConnectionInterface
@@ -23,7 +18,8 @@ class ServerConnection {
 	/**
 	 * @param \React\Socket\ConnectionInterface $conn
 	 */
-	public function __construct(ConnectionInterface $conn) {
+	public function __construct(Connection $conn) {
+		//parent::__construct($conn);
 		$this->conn = $conn;
 	}
 
