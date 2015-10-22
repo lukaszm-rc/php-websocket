@@ -139,8 +139,8 @@ class Request {
 	} else {
 	    $content = $_response;
 	}
-	$_content=$response;
-	if (preg_match('/(\{.*\})/', $content, $match)) {
+	//$_content=$response;
+		if (preg_match('/(\{.*\})/', $content, $match)) {
 	    $content = json_decode($match[ 1 ], true);
 	    return $content;
 	}

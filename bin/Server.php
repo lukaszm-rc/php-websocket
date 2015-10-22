@@ -12,8 +12,7 @@ $server = WebSocket\Server\WebSocketServer::Factory($messageHandler, "127.0.0.1"
 /**
  * Podobne do setInterval() z Javascriptu
  */
-$server->loop->addPeriodicTimer(5, function () {
-	echo "+";
-	return true;
+$server->loop->addPeriodicTimer(5, function () use (&$messageHandler) {
+	echo $messageHandler->getStatus(5);
 });
 $server->run();
