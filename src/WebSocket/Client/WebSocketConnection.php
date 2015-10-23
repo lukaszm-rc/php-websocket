@@ -79,8 +79,8 @@ class WebSocketConnection {
 		}
 		$this->setSocket(new Connection($client, $this->getLoop()));
 		$this->getSocket()->on('data', function ($data) use ($root) {
-			$data = Request::parseIncomingRaw($data);
-			$root->parseData($data);
+			$data2 = Request::parseIncomingRaw($data);
+			$root->parseData($data2);
 		});
 
 		$this->getSocket()->write($this->createHeader());
@@ -168,8 +168,7 @@ class WebSocketConnection {
 		}
 
 		if ($this->connected && !empty($response['content'])) {
-			$content = Request::getMessage($response);
-
+			$content = Request::getMessage($response, false);
 			if (is_array($content)) {
 				$this->receiveData($content, $response);
 			}
