@@ -13,4 +13,4 @@ before_script:
   - composer install --dev
   - composer update
 script: 
-    - phpunit 
+    - phpunit --configuration phpunit.xml.dist --coverage-text
